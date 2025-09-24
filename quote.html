@@ -338,8 +338,8 @@
     if (document.getElementById("specialty").checked) services.push("Specialty Cleaning");
 
     let params = {
-      from_name: document.getElementById("fullname").value,
-      reply_to: document.getElementById("email").value,
+      fullname: document.getElementById("fullname").value,
+      email: document.getElementById("email").value,
       phone: document.getElementById("phone").value,
       facility: document.getElementById("facility").value,
       date: document.getElementById("calendar").value,
@@ -354,8 +354,8 @@
 
     // 2️⃣ Send confirmation to Customer
     emailjs.send("service_gb4rp6s", "template_3pd240e", {
-      to_email: document.getElementById("email").value,
-      customer_name: document.getElementById("fullname").value,
+      email: document.getElementById("email").value,
+      fullname: document.getElementById("fullname").value,
       service: services.join(", "),
       date: document.getElementById("calendar").value,
       facility: document.getElementById("facility").value
@@ -370,5 +370,6 @@
 </script>
 </body>
 </html>
+
 
 
