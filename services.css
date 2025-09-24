@@ -53,6 +53,7 @@ h2, h3 {
 }
 p, li {
     font-family: 'Arvo', serif;
+    line-height: 35px;
 }
 .image img{
   border-left: 10px solid #6a7980;
@@ -103,3 +104,4 @@ footer small{
       width: 70%;
     }
   }
+
