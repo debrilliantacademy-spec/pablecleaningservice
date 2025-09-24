@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Get a Quote | Pable Cleaning Service</title>
+  <link rel="stylesheet" href="quote.css">
+  <link rel="shortcut icon" href="assets/images/logo-bg.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+  <style>
+
+  </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-lg fixed">
+  <div class="container-fluid">
+      
+      <!-- Mobile Toggle -->
+      <button class="navbar-toggler border-0 me-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <!-- Logo -->
+    <a class="navbar-brand fw-bold logo" href="index.html">
+      <img src="assets/images/logo.png" alt="Logo">
+    </a>
+
+    
+
+
+
+    <!-- Nav Links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto me-3">
+
+
+        <!-- Cleaning Services -->
+        <li class="nav-item">
+          <a class="nav-link " href="services.html">
+            Services
+          </a>
+        </li>
+
+        <!-- Why Us -->
+        <li class="nav-item dropdown">
+          <a class="nav-link  " href="" id="whyUsDropdown" role="button" 
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Why Us
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="whyUsDropdown">
+            <li><a class="dropdown-item" href="about.html">About Us</a></li>
+            <li><a class="dropdown-item" href="review.html">Reviews</a></li>
+          </ul>
+        </li>
+
+        <!-- Contact -->
+        <li class="nav-item dropdown">
+          <a class="nav-link  " href="#" id="contactDropdown" role="button" 
+             data-bs-toggle="dropdown" aria-expanded="false">
+            Contact
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="contactDropdown">
+            <li><a class="dropdown-item" href="quote.html">Request Quote</a></li>
+            <li><a class="dropdown-item" href="contact.html">Get in Touch</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <!-- Call To Action -->
+      <a href="quote.html" class="btn btn-warning fw-bold text-uppercase px-3">
+        Book Now
+      </a>
+    </div>
+  </div>
+</nav>
+
+<div class="container py-5" style="max-width: 50rem; border-radius:0;">
+  <h2 class="text-center mb-4">Get a Quote</h2>
+  
+  <div class="card shadow p-5" style="border-radius:0;">
+    
+    <!-- Progress -->
+    <div class="progress mb-5" style="height: 40px; border-radius:0;">
+      <div id="progress-bar" class="progress-bar" role="progressbar" style="width: 20%; border-radius:0;"></div>
+    </div>
+
+    <form id="quoteForm">
+
+      <!-- Step 1 -->
+      <div class="step active">
+        <h5 class="mb-3">Step 1: Facility Type</h5>
+        <select class="form-select" id="facility" required style="border-radius:0;">
+          <option value="">Select facility type</option>
+          <option>Office</option>
+          <option>Healthcare</option>
+          <option>Education</option>
+          <option>Industrial</option>
+          <option>Other</option>
+        </select>
+      </div>
+
+      <!-- Step 2 -->
+      <div class="step">
+        <h5 class="mb-3">Step 2: Services Needed</h5>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="janitorial" style="border-radius:0;">
+          <label class="form-check-label" for="janitorial">Commericial Cleaning</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="disinfection" style="border-radius:0;">
+          <label class="form-check-label" for="disinfection">Residential Cleaning</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="specialty" style="border-radius:0;">
+          <label class="form-check-label" for="specialty">Specialty Cleaning</label>
+        </div>
+      </div>
+
+      <!-- Step 3 -->
+      <div class="step">
+        <h5 class="mb-3">Step 3: Schedule</h5>
+        <input type="text" id="calendar" class="form-control" placeholder="Choose a date" required style="border-radius:0;">
+      </div>
+
+      <!-- Step 4 -->
+      <div class="step">
+        <h5 class="mb-3">Step 4: Contact Info</h5>
+        <input type="text" class="form-control mb-3" id="fullname" placeholder="Full Name" required style="border-radius:0;">
+        <input type="email" class="form-control mb-3" id="email" placeholder="Email" required style="border-radius:0;">
+        <input type="tel" class="form-control mb-3" id="phone" placeholder="Phone Number" required style="border-radius:0;">
+      </div>
+
+      <!-- Step 5 -->
+      <div class="step">
+        <h5 class="mb-3">Step 5: Additional Info</h5>
+        <textarea class="form-control" id="notes" rows="4" placeholder="Additional details..." style="border-radius:0;"></textarea>
+      </div>
+
+      <!-- Navigation Buttons -->
+      <div class="mt-4 d-flex justify-content-between">
+        <button type="button" id="prevBtn" class="btn btn-outline-secondary" disabled style="border-radius:0;">Previous</button>
+        <button type="button" id="nextBtn" class="btn" style="border-radius:0; background-color: #165A84; color: white;">Next</button>
+      </div>
+
+    </form>
+  </div>
+</div>
+<footer class="bg-white shadow-lg pt-5">
+  <div class="container-fluid px-3">
+
+    <div class="row">
+
+      <!-- Logo -->
+      <div class="col-12 col-md-3 mb-4 logo d-flex justify-content-center align-items-center">
+        <img src="assets/images/logo.png" alt="Pable Cleaning Service Logo" class="img-fluid mb-3">
+      </div>
+
+      <!-- Quick Links (Most Important Only) -->
+      <div class="col-6 col-md-3 mb-4  justify-content-center align-items-center">
+        <h5 class=""><a href="about.html" class="text-decoration-none">Why Us</a></h5>
+        <h5 class=""><a href="review.html" class="text-decoration-none">Review</a></h5>
+        <h5 class=""><a href="services.html" class="text-decoration-none">Commercial Cleaning </a></h5>
+        <h5 class=""><a href="services.html" class="text-decoration-none">Residential Cleaning</a></h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <h5 class=""><a href="quote.html" class="text-decoration-none">Get A Quote</a></h5>
+        <h5 class=""><a href="about.html" class="text-decoration-none">About Us</a></h5>
+      </div>
+
+      <div class="col-6 col-md-3 mb-4">
+        <h5 class="fw-bold ">Connect</h5>
+        <h5><i class="bi bi-envelope-fill" style="font-size:1.5rem; color:#165A84;"></i> info@pablecleaning.com</h5>
+        <h5><i class="bi bi-geo-alt-fill" style="font-size:1.5rem; color:#165A84;"></i> Greater Sudbury, Ontario, CAN</h5>
+        <h5><i class="bi bi-telephone-fill" style="font-size:1.5rem; color:#165A84;"></i> (647) 621-453</h5>
+        <div class="d-flex gap-3 mb-3 ">
+          <a href="">
+          <img src="assets/images/facebook (1).png" alt="" class="img-fluid"style="width: 50px">
+          </a>
+          <a href="">
+          <img src="assets/images/instagram (1).png" alt="" class="img-fluid"style="width: 50px">
+          </a>
+          <a href="">
+          <img src="assets/images/linkedin.png" alt="" class="img-fluid"style="width: 50px">
+          </a>
+        </div>
+
+        <!-- Search Form -->
+        
+      </div>
+
+    </div>
+
+    <hr class="border-secondary">
+
+    <!-- Bottom Area -->
+    <div class="">
+      <div class="text-center mb-2 mb-md-0">
+        <small class="text-center">&copy; 2025 Pable Cleaning Service. All Rights Reserved.</small>
+      </div>
+      <div class="text-center">
+        <a href="#privacy" class=" text-decoration-none">Privacy Policy</a>
+        <a href="#terms" class="text-decoration-none">Terms of Use</a>
+      </div>
+    </div>
+
+  </div>
+</footer>
+
+<script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+
+<script>
+  // Initialize EmailJS
+  (function(){
+    emailjs.init("5e2xg0al5q2dlXd5B"); // 🔑 Replace with your EmailJS Public Key
+  })();
+
+  flatpickr("#calendar", {
+    dateFormat: "Y-m-d",
+    minDate: "today"
+  });
+
+  let currentStep = 0;
+  const steps = document.querySelectorAll(".step");
+  const progressBar = document.getElementById("progress-bar");
+  const prevBtn = document.getElementById("prevBtn");
+  const nextBtn = document.getElementById("nextBtn");
+
+  function showStep(n) {
+    steps.forEach((step, i) => step.classList.toggle("active", i === n));
+    progressBar.style.width = ((n+1) / steps.length) * 100 + "%";
+    prevBtn.disabled = n === 0;
+    nextBtn.textContent = (n === steps.length - 1) ? "Submit & Generate Invoice" : "Next";
+  }
+
+  nextBtn.addEventListener("click", () => {
+    if (currentStep < steps.length - 1) {
+      currentStep++;
+      showStep(currentStep);
+    } else {
+      generateInvoice();
+      sendEmails();
+    }
+  });
+
+  prevBtn.addEventListener("click", () => {
+    if (currentStep > 0) {
+      currentStep--;
+      showStep(currentStep);
+    }
+  });
+
+  function generateInvoice() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+
+    // Branding
+    doc.setFontSize(16);
+    doc.setTextColor(22, 90, 132);
+    doc.text("Pable Cleaning Service", 70, 20);
+
+    doc.setFontSize(10);
+    doc.setTextColor(50, 50, 50);
+    doc.text("Greater Sudbury, Ontario, CAN", 70, 28);
+    doc.text("📞 (647) 621-4531 | ✉ info@pablecleaningservice.com", 70, 34);
+
+    // Invoice Info
+    let invoiceNumber = "INV-" + Math.floor(Math.random() * 10000);
+    let today = new Date().toLocaleDateString();
+
+    doc.setFontSize(12);
+    doc.text(`Invoice #: ${invoiceNumber}`, 160, 20);
+    doc.text(`Date: ${today}`, 160, 28);
+
+    // Customer Info
+    let fullname = document.getElementById("fullname").value;
+    let email = document.getElementById("email").value;
+    let phone = document.getElementById("phone").value;
+    let facility = document.getElementById("facility").value;
+    let date = document.getElementById("calendar").value;
+    let notes = document.getElementById("notes").value;
+
+    doc.text(`Bill To: ${fullname}`, 20, 60);
+    doc.text(`Email: ${email}`, 20, 68);
+    doc.text(`Phone: ${phone}`, 20, 76);
+    doc.text(`Facility Type: ${facility}`, 20, 84);
+    doc.text(`Preferred Date: ${date}`, 20, 92);
+
+    // Services
+    let services = [];
+    if (document.getElementById("janitorial").checked) services.push({ name: "Janitorial", price: 100 });
+    if (document.getElementById("disinfection").checked) services.push({ name: "Disinfection", price: 150 });
+    if (document.getElementById("specialty").checked) services.push({ name: "Specialty Cleaning", price: 200 });
+
+    let startY = 110;
+    doc.setFillColor(22, 90, 132);
+    doc.setTextColor(255, 255, 255);
+    doc.rect(20, startY, 170, 10, "F");
+    doc.text("Service", 25, startY + 7);
+    doc.text("Price ($)", 160, startY + 7);
+
+    let total = 0;
+    let rowY = startY + 15;
+    doc.setTextColor(0, 0, 0);
+    services.forEach((s) => {
+      doc.text(s.name, 25, rowY);
+      doc.text(s.price.toString(), 160, rowY);
+      rowY += 10;
+      total += s.price;
+    });
+
+    doc.setFontSize(14);
+    doc.text("TOTAL:", 120, rowY + 10);
+    doc.text(`$${total}`, 160, rowY + 10);
+
+    doc.setFontSize(12);
+    doc.text("Additional Notes:", 20, rowY + 30);
+    doc.text(notes || "N/A", 20, rowY + 40);
+
+    doc.setFontSize(10);
+    doc.setTextColor(100, 100, 100);
+    doc.text("Thank you for choosing Pable Cleaning Service!", 20, 280);
+
+    doc.save(`Invoice_${invoiceNumber}.pdf`);
+  }
+
+  function sendEmails() {
+    let services = [];
+    if (document.getElementById("janitorial").checked) services.push("Janitorial");
+    if (document.getElementById("disinfection").checked) services.push("Disinfection");
+    if (document.getElementById("specialty").checked) services.push("Specialty Cleaning");
+
+    let params = {
+      from_name: document.getElementById("fullname").value,
+      reply_to: document.getElementById("email").value,
+      phone: document.getElementById("phone").value,
+      facility: document.getElementById("facility").value,
+      date: document.getElementById("calendar").value,
+      notes: document.getElementById("notes").value,
+      service: services.join(", ")
+    };
+
+    // 1️⃣ Send to Admin
+    emailjs.send("service_gb4rp6s", "template_7zxt4pa", params)
+      .then(() => console.log("Admin email sent!"))
+      .catch((err) => console.error("Admin email failed:", err));
+
+    // 2️⃣ Send confirmation to Customer
+    emailjs.send("service_gb4rp6s", "template_3pd240e", {
+      to_email: document.getElementById("email").value,
+      customer_name: document.getElementById("fullname").value,
+      service: services.join(", "),
+      date: document.getElementById("calendar").value,
+      facility: document.getElementById("facility").value
+    })
+    .then(() => {
+      alert("✅ Request submitted! A confirmation email has been sent to you.");
+    })
+    .catch((err) => {
+      alert("❌ Failed to send confirmation. Error: " + JSON.stringify(err));
+    });
+  }
+</script>
+</body>
+</html>

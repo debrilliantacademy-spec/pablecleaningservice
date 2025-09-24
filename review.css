@@ -1,0 +1,114 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url(assets/fonts/Oswald/static/Oswald-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Arvo';
+    src: url(assets/fonts/Arvo/Arvo-Regular.ttf);
+}
+body{
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+}
+nav .logo img{
+  width: 70px;
+  margin-left: 20px;
+}
+nav a{
+  font-family: 'Arvo', serif;
+  color: #165A84;
+}
+.nav-item a{
+  color: #165A84;
+}
+nav .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: none;
+  width: 100%;
+}
+nav .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+nav .dropdown-menu{
+    border: none;
+    border-radius: 0;
+}
+nav .dropdown-menu a{
+    border-bottom: 1px solid rgb(22, 90, 132, 0.2);
+    color: black;
+}
+p{
+    font-family: 'Arvo', serif;
+}
+.fw-bold{
+    font-family: 'Oswald',sans-serif;
+}
+button .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: none;
+  width: 100%;
+}
+button:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.star { 
+    cursor: pointer;
+}
+.testimonial-card {
+    border: 0; 
+    transition: transform 0.2s; min-height: 150px; 
+}
+.testimonial-card:hover { 
+    transform: translateY(-5px); 
+}
+footer .logo img{
+  width: 150px;
+}
+
+footer h5{
+  font-family: 'arvo',serif;
+  color: black;
+  font-size: 1rem;
+}
+footer a{
+  font-family: 'arvo',serif;
+  color: black;
+}
+footer small{
+  font-family: 'Arvo',serif;
+  color: black;
+}
+ @media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* remove the gap */
+    }
+    nav .btn {
+      width: 10%;
+    }
+    nav .dropdown-menu{
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+    nav .dropdown-menu a{
+      border-bottom: none;
+}
+  }

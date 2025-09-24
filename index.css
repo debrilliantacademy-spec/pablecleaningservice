@@ -1,0 +1,353 @@
+@font-face {
+    font-family: 'Oswald';
+    src: url(assets/fonts/Oswald/static/Oswald-SemiBold.ttf);
+}
+@font-face {
+    font-family: 'Arvo';
+    src: url(assets/fonts/Arvo/Arvo-Regular.ttf);
+}
+body{
+    background-color: white;
+    box-sizing: border-box;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    height:100vh;
+}
+nav .logo img{
+  width: 70px;
+  margin-left: 20px;
+}
+nav a{
+  font-family: 'Arvo', serif;
+  color: #165A84;
+}
+.nav-item a{
+  color: #165A84;
+}
+nav .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: none;
+  width: 100%;
+}
+nav .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+nav .dropdown-menu{
+  border: none;
+  border-radius: 0;
+}
+nav .dropdown-menu a{
+  border-bottom: 1px solid rgb(22, 90, 132, 0.2);
+  color: black;
+}
+.hero h1{
+  font-family: 'Oswald',sans-serif;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #165A84;
+  font-size: 2rem;
+}
+.hero .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  border: none;
+}
+.hero .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+p{
+  font-family: 'Arvo',serif;
+  color: #484f52;
+  line-height: 35px;
+}
+.benefit h5{
+  font-family: 'Oswald',sans-serif;
+  color: #165A84;
+}
+h2{
+  font-family: 'Oswald',sans-serif;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-display: uppercase;
+  color: #165A84;
+}
+h3{
+  font-family: 'Oswald',sans-serif;
+}
+.service h5{
+  color: #165A84;
+  font-family: 'Arvo',serif;
+  margin-top: 20px;
+}
+.service .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+.service .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.building h5{
+  color: #165A84;
+  font-family: 'Arvo',serif;
+  margin-top: 20px;
+}
+.building .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+}
+.building .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.image img{
+  border-left: 10px solid #6a7980;
+}
+h6{
+  font-family: 'Oswald',sans-serif;
+  background-color: rgb(255, 255, 255, 0.6);
+  padding:  10%;
+}
+.building .card2{
+  background-color: #176ba0;
+}
+.building .card2 h6{
+  background-color: transparent;
+}
+.benefit .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  width: 50%;
+}
+.benefit .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.about{
+  background-color: #165A84;
+  color: white;
+}
+.about p{
+  color: white;
+  font-size: 0.8rem;
+}
+.about h5{
+  font-family: 'Oswald',sans-serif;
+  font-size: 1rem;
+}
+.about .nuumber{
+  font-family: 'Oswald',sans-serif;
+  font-size: 5rem;
+}
+.about .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #6a7980;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  width: 50%;
+}
+.about .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.certifications .image2 img{
+  border-left: 10px solid #6a7980;
+}
+.certifications .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  width: 50%;
+}
+.certifications .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.reviews .image3 img{
+  border-right: 10px solid #6a7980;
+}
+.reviews .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  width: 50%;
+}
+.reviews .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+.community .btn{
+  font-family: 'Oswald',sans-serif;
+  border-radius: 0;
+  background-color: #165A84;
+  border: none;
+  color: white;
+  padding: 10px;
+  font-size: 0.8rem;
+  width: 50%;
+}
+.community .btn:hover{
+  background-color: #176ba0;
+  color: white;
+  border: 2px black solid;
+}
+footer .logo img{
+  width: 150px;
+}
+
+footer h5{
+  font-family: 'arvo',serif;
+  color: black;
+  font-size: 1rem;
+}
+footer a{
+  font-family: 'arvo',serif;
+  color: black;
+}
+footer small{
+  font-family: 'Arvo',serif;
+  color: black;
+}
+@keyframes fadeInUp {
+  0% { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  100% { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.fade-in { 
+  opacity: 0; 
+  animation-name: 
+  fadeInUp; animation-duration: 1s; 
+  animation-fill-mode: forwards; 
+}
+.delay-1 { 
+  animation-delay: 0.5s; 
+}
+.delay-2 { 
+  animation-delay: 1s; 
+}
+.delay-3 { 
+  animation-delay: 1.5s; 
+}
+.delay-4 { 
+  animation-delay: 2s; 
+}
+.delay-5 { 
+  animation-delay: 2.5s; 
+}
+.delay-6 { 
+  animation-delay: 3s; 
+}
+.delay-7 { 
+  animation-delay: 3.5s; 
+}
+.delay-8 { 
+  animation-delay: 4s; 
+}
+.delay-9 { 
+  animation-delay: 4.5s; 
+}
+
+.custom-card {
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .custom-card:hover {
+    transform: translateY(-5px) scale(1.03);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15) !important;
+  }
+  @media (min-width: 992px) {
+    .navbar .dropdown:hover .dropdown-menu {
+      display: block;
+      margin-top: 0; /* remove the gap */
+    }
+    .hero h1 { 
+      font-size: 3.5rem; 
+    }
+    .hero .btn{
+      width: 50%;
+    }
+    nav .btn {
+      width: 10%;
+    }
+    .building p{
+      padding-right: 20px;
+    }
+    .image img{
+      width: 80%;
+    }
+    .image1 img{
+      width: 90%;
+    }
+    .certifications .image2 img{
+      width: 70%;
+      margin-left: 100px;
+    }
+    .reviews .image3 img{
+      width: 70%;
+    }
+    .community .image4 img{
+      width: 70%;
+      margin-left: 100px;
+    }
+    .about .btn{
+      width: 15%;
+    }
+    nav .dropdown-menu{
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border: none;
+    }
+    nav .dropdown-menu a{
+      border-bottom: none;
+}
+  }
