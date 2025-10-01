@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Get a Quote | Pabel Cleaning Service</title>
+  <title>Get a Quote | PABEL Cleaning Services</title>
   <link rel="stylesheet" href="quote.css">
   <link rel="shortcut icon" href="assets/images/logo-bg.jpg" type="image/x-icon">
   <link rel="stylesheet" href="bootstrap-5.3.3-dist/css/bootstrap.min.css">
@@ -112,11 +112,19 @@
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="disinfection" style="border-radius:0;">
-          <label class="form-check-label" for="disinfection">Residential Cleaning</label>
+          <label class="form-check-label" for="disinfection">Institutional Cleaning</label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="checkbox" id="specialty" style="border-radius:0;">
           <label class="form-check-label" for="specialty">Specialty Cleaning</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="construction" style="border-radius:0;">
+          <label class="form-check-label" for="construction">Post-construction cleaning</label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="checkbox" id="sanitation" style="border-radius:0;">
+          <label class="form-check-label" for="sanitation">Disinfection & sanitization services</label>
         </div>
       </div>
 
@@ -156,7 +164,7 @@
 
       <!-- Logo -->
       <div class="col-12 col-md-3 mb-4 logo d-flex justify-content-center align-items-center">
-        <img src="assets/images/logo-bg.jpg" alt="Pabel Cleaning Service Logo" class="img-fluid mb-3">
+        <img src="assets/images/logo-bg.jpg" alt="PABEL Cleaning Servicesss Logo" class="img-fluid mb-3">
       </div>
 
       <!-- Quick Links (Most Important Only) -->
@@ -200,7 +208,7 @@
     <!-- Bottom Area -->
     <div class="">
       <div class="text-center mb-2 mb-md-0">
-        <small class="text-center">&copy; 2025 Pabel Cleaning Service. All Rights Reserved.</small>
+        <small class="text-center">&copy; 2025 PABEL Cleaning Servicesss. All Rights Reserved.</small>
       </div>
       <div class="text-center">
         <a href="#privacy" class=" text-decoration-none">Privacy Policy</a>
@@ -237,7 +245,7 @@
     steps.forEach((step, i) => step.classList.toggle("active", i === n));
     progressBar.style.width = ((n+1) / steps.length) * 100 + "%";
     prevBtn.disabled = n === 0;
-    nextBtn.textContent = (n === steps.length - 1) ? "Submit & Generate Invoice" : "Next";
+    nextBtn.textContent = (n === steps.length - 1) ? "Submit & Book For Inspection" : "Next";
   }
 
   nextBtn.addEventListener("click", () => {
@@ -257,85 +265,13 @@
     }
   });
 
-  function generateInvoice() {
-    const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-
-    // Branding
-    doc.setFontSize(16);
-    doc.setTextColor(22, 90, 132);
-    doc.text("Pabel Cleaning Service", 70, 20);
-
-    doc.setFontSize(10);
-    doc.setTextColor(50, 50, 50);
-    doc.text("Greater Sudbury, Ontario, CAN", 70, 28);
-    doc.text("📞 (647) 621-4531, (705)-561-5674 | ✉ info@pabelcleaningservice.com", 70, 34);
-
-    // Invoice Info
-    let invoiceNumber = "INV-" + Math.floor(Math.random() * 10000);
-    let today = new Date().toLocaleDateString();
-
-    doc.setFontSize(12);
-    doc.text(`Invoice #: ${invoiceNumber}`, 160, 20);
-    doc.text(`Date: ${today}`, 160, 28);
-
-    // Customer Info
-    let fullname = document.getElementById("fullname").value;
-    let email = document.getElementById("email").value;
-    let phone = document.getElementById("phone").value;
-    let facility = document.getElementById("facility").value;
-    let date = document.getElementById("calendar").value;
-    let notes = document.getElementById("notes").value;
-
-    doc.text(`Bill To: ${fullname}`, 20, 60);
-    doc.text(`Email: ${email}`, 20, 68);
-    doc.text(`Phone: ${phone}`, 20, 76);
-    doc.text(`Facility Type: ${facility}`, 20, 84);
-    doc.text(`Preferred Date: ${date}`, 20, 92);
-
-    // Services
-    let services = [];
-    if (document.getElementById("janitorial").checked) services.push({ name: "Janitorial", price: 100 });
-    if (document.getElementById("disinfection").checked) services.push({ name: "Disinfection", price: 150 });
-    if (document.getElementById("specialty").checked) services.push({ name: "Specialty Cleaning", price: 200 });
-
-    let startY = 110;
-    doc.setFillColor(22, 90, 132);
-    doc.setTextColor(255, 255, 255);
-    doc.rect(20, startY, 170, 10, "F");
-    doc.text("Service", 25, startY + 7);
-    doc.text("Price ($)", 160, startY + 7);
-
-    let total = 0;
-    let rowY = startY + 15;
-    doc.setTextColor(0, 0, 0);
-    services.forEach((s) => {
-      doc.text(s.name, 25, rowY);
-      doc.text(s.price.toString(), 160, rowY);
-      rowY += 10;
-      total += s.price;
-    });
-
-    doc.setFontSize(14);
-    doc.text("TOTAL:", 120, rowY + 10);
-    doc.text(`$${total}`, 160, rowY + 10);
-
-    doc.setFontSize(12);
-    doc.text("Additional Notes:", 20, rowY + 30);
-    doc.text(notes || "N/A", 20, rowY + 40);
-
-    doc.setFontSize(10);
-    doc.setTextColor(100, 100, 100);
-    doc.text("Thank you for choosing Pabel Cleaning Service!", 20, 280);
-
-    doc.save(`Invoice_${invoiceNumber}.pdf`);
-  }
-
   function sendEmails() {
     let services = [];
-    if (document.getElementById("janitorial").checked) services.push("Janitorial");
-    if (document.getElementById("disinfection").checked) services.push("Disinfection");
+    if (document.getElementById("janitorial").checked) services.push("Commercial Cleaning");
+    if (document.getElementById("disinfection").checked) services.push("Insitutional Cleaning");
     if (document.getElementById("specialty").checked) services.push("Specialty Cleaning");
+    if (document.getElementById("construction").checked) services.push("Post Construction Cleaning");
+    if (document.getElementById("sanitation").checked) services.push("Disinfection & Sanitation services");
 
     let params = {
       fullname: document.getElementById("fullname").value,
@@ -370,6 +306,7 @@
 </script>
 </body>
 </html>
+
 
 
 
