@@ -15,7 +15,7 @@ body{
     height:100vh;
 }
 nav .logo img{
-  width: 70px;
+  
   margin-left: 20px;
 }
 nav a{
@@ -351,3 +351,4 @@ footer small{
       border-bottom: none;
 }
   }
+
