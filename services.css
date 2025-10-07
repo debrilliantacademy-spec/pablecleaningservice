@@ -15,7 +15,7 @@ body{
     height:100vh;
 }
 nav .logo img{
-  width: 70px;
+  width: 100px;
   margin-left: 20px;
 }
 nav a{
@@ -100,8 +100,13 @@ footer small{
     nav .dropdown-menu a{
       border-bottom: none;
     }
+     nav .logo img{
+     width:150px;
+    }
+
     .image img{
       width: 70%;
     }
   }
+
 
