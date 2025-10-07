@@ -15,9 +15,10 @@ body{
     height:100vh;
 }
 nav .logo img{
-  width: 70px;
+  width:100px;
   margin-left: 20px;
 }
+
 nav a{
   font-family: 'Arvo', serif;
   color: #165A84;
@@ -141,4 +142,9 @@ footer small{
     .image img{
       width: 80%;
     }
+    nav .logo img{
+     width:150px;
+    }
+
+
   }
