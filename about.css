@@ -111,6 +111,8 @@ p, li {
 }
 .why-card i {
     color: white;
+    font-size: 2rem;
+    margin-bottom: 20px;
 }
 footer .logo img{
     width: 150px;
@@ -153,6 +155,7 @@ footer small{
 
 
   }
+
 
 
 
