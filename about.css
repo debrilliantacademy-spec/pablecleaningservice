@@ -96,7 +96,7 @@ p, li {
     background-color: #f8f9fa;
 }
 .why-card {
-    background: #165A84;
+    background-color: #165A84;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
@@ -107,6 +107,12 @@ p, li {
     height: 50px;
     border-radius: 25px;
     bacground-color: white;
+}
+.why-card h5{
+    color: white;
+}
+.why-card p{
+    color: white;
 }
 .why-card i {
     font-size: 2rem;
@@ -154,4 +160,5 @@ footer small{
 
 
   }
+
 
