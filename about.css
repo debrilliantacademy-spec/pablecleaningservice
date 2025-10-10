@@ -96,11 +96,17 @@ p, li {
     background-color: #f8f9fa;
 }
 .why-card {
-    background: #fff;
+    background: #165A84;
     padding: 2rem;
     text-align: center;
     box-shadow: 0 0.25rem 0.75rem rgba(0,0,0,0.1);
     height: 100%;
+}
+.why-card .emoji{
+    width: 50px;
+    height: 50px;
+    border-radius: 25px;
+    bacground-color: white;
 }
 .why-card i {
     font-size: 2rem;
@@ -148,3 +154,4 @@ footer small{
 
 
   }
+
