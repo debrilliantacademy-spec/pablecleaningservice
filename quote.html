@@ -302,7 +302,7 @@
 <script>
   // Initialize EmailJS
   (function(){
-    emailjs.init("5e2xg0al5q2dlXd5B"); // 🔑 Replace with your EmailJS Public Key
+    emailjs.init("W91uXSSIjbwLlu2_r"); // 🔑 Replace with your EmailJS Public Key
   })();
 
   flatpickr("#calendar", {
@@ -358,12 +358,12 @@
     };
 
     // 1️⃣ Send to Admin
-    emailjs.send("service_gb4rp6s", "template_7zxt4pa", params)
+    emailjs.send("service_grw8aig", "template_mmge4yt", params)
       .then(() => console.log("Admin email sent!"))
       .catch((err) => console.error("Admin email failed:", err));
 
     // 2️⃣ Send confirmation to Customer
-    emailjs.send("service_gb4rp6s", "template_3pd240e", {
+    emailjs.send("service_grw8aig", "template_4rtc4rc", {
       email: document.getElementById("email").value,
       fullname: document.getElementById("fullname").value,
       service: services.join(", "),
@@ -380,6 +380,7 @@
 </script>
 </body>
 </html>
+
 
 
 
