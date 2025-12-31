@@ -50,10 +50,34 @@ nav .dropdown-menu a{
 }
 h2, h4, h6 {
     font-family: 'Oswald',sans-serif;
+    color: #165A84;
+
 }
 p, label {
     font-family: 'Arvo', serif;
 }
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    font-family: 'Oswald',sans-serif;
+    outline: none;
+    transition: 0.4s;
+    margin-bottom: 20px;
+  }
+  .active, .accordion:hover {
+    background-color: #ccc;
+  }
+  .panel{
+    padding: 0 18px;
+    background-color: white;
+    display: none;
+    overflow: hidden;
+  }
 footer .logo img{
   width: 150px;
 }
