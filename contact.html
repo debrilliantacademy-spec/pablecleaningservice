@@ -39,7 +39,7 @@
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "LocalBusiness",
+    "@type": "CleaningService",
     "name": "PABEL Cleaning Services",
     "image": "https://www.pabelcleaningservices.com/assets/images/logo-bg.jpg",
     "@id": "https://www.pabelcleaningservices.com/",
@@ -98,6 +98,70 @@
     "description": "PABEL Cleaning Services provides professional commercial, institutional, and specialty cleaning in Greater Sudbury, Ontario. Trusted cleaners offering reliable, high-quality services across Canada."
   }
   </script>
+<script type="application/ld+json">
+  
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What cleaning services does PABEL Cleaning Services offer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "PABEL Cleaning Services offers residential cleaning, commercial cleaning, deep cleaning, move-in and move-out cleaning, and office cleaning services in Greater Sudbury, Ontario."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does PABEL Cleaning Services operate in Greater Sudbury?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, PABEL Cleaning Services is a locally operated cleaning company serving Greater Sudbury and nearby areas in Ontario."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I book a cleaning service with PABEL Cleaning Services?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can book a cleaning service by contacting PABEL Cleaning Services through the website or by phone to schedule an appointment."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are your cleaning services available for offices and businesses?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, PABEL Cleaning Services provides cleaning for offices and commercial spaces. Services are scheduled to minimize disruption to daily operations and can be arranged during business hours or after hours as needed."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How far in advance should I book a cleaning service?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Booking in advance is recommended to secure your preferred date and time. Availability may vary depending on demand, but same-week bookings may be possible depending on the schedule."
+      }
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "url": "https://www.pabelcleaningservices.com/contact.html",
+  "speakable": {
+    "@type": "SpeakableSpecification",
+    "cssSelector": ["#voice-answer"]
+  }
+}
+</script>
+
+
+
+
 </head>
 
 
@@ -129,6 +193,12 @@
         <li class="nav-item">
           <a class="nav-link " href="services.html">
             Services
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link " href="contact.html#faq">
+            FAQ
           </a>
         </li>
         <!-- Why Us -->
@@ -245,6 +315,38 @@
 
     </div>
 
+   <div class="mt-5" id="faq">
+                <h2 class="text-center mb-3">Frequently Asked Questions(FAQ):</h2>
+                <p id="voice-answer">
+PABEL Cleaning Services provides residential and commercial cleaning services in Greater Sudbury, Ontario, including deep cleaning, office cleaning, and move-in and move-out cleaning.
+</p>
+
+                <button class="accordion" onclick="typeWriter()"> What cleaning services does PABEL Cleaning Services offer?</button>
+                <div class="panel">
+                <p id="demo">PABEL Cleaning Services offers residential cleaning, commercial cleaning, deep cleaning, move-in and move-out cleaning, and office cleaning services in Greater Sudbury, Ontario, Canada.</p>
+                </div>
+
+              <button class="accordion"> Does PABEL Cleaning Services operate in Greater Sudbury?</button>
+              <div class="panel">
+              <p> Yes, PABEL Cleaning Services is a locally operated cleaning company serving Greater Sudbury and nearby areas in Ontario.</p>
+              </div>
+
+
+              <button class="accordion"> How can I book a cleaning service with PABEL Cleaning Services?</button>
+              <div class="panel">
+              <p>You can book a cleaning service by contacting PABEL Cleaning Services through our website or by phone to schedule a convenient appointment.</p>
+              </div>
+              <button class="accordion"> Are your cleaning services available for offices and businesses?</button>
+              <div class="panel">
+              <p>Yes, PABEL Cleaning Services provides cleaning for offices and commercial spaces. Services are scheduled to minimize disruption to daily operations and can be arranged during business hours or after hours as needed.</p>
+              </div>
+              <button class="accordion"> How far in advance should I book a cleaning service?</button>
+              <div class="panel">
+              <p>Booking in advance is recommended to secure your preferred date and time. Availability may vary depending on demand, but same-week bookings may be possible depending on the schedule.</p>
+              </div>
+              
+            </div>
+
     <!-- Google Map -->
     <!-- Google Map -->
 <div class="mt-5">
@@ -325,6 +427,20 @@
 <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.js"></script>
 
 <script>
+  let acc = document.getElementsByClassName("accordion");
+        let i;
+
+        for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        let panel = this.nextElementSibling;
+        if (panel.style.display === "block") {
+        panel.style.display = "none";
+        } else {
+        panel.style.display = "block";
+        }
+       });
+     }
   document.getElementById("whatsappForm").addEventListener("submit", function(event){
     event.preventDefault(); // stop form from submitting normally
 
